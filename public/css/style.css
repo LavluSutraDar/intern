@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 10px;
+  padding: 0px;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1{
+  text-align: center;
+}
+
+.container{
+  height: 100vh;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4,1fr) ;
+  grid-template-rows:0.2fr 1.5fr 1.2fr 0.6fr;
+  grid-template-areas: 
+  "header header header header"
+  "sidebar content1 content2 content3"
+  "sidebar content4 content5 content6"
+  "sidebar footer footer footer";
+}
+
+ .header{
+  background: #f1c40f;
+  grid-area: header;
+} 
+.sidebar{
+  background: #9b59b6;
+  grid-area: sidebar;
+}
+.content1{
+  background: #7a514d;
+  
+}
+.content1 .child{
+  grid-template-columns: 3fr;
+  grid-template-rows: 0.1fr 1fr 1fr 1fr;
+  display: grid;
+  grid-gap: 2px; 
+  grid-template-areas: 
+  "child1"
+  "child2"
+  "child3"
+  "child4";
+}
+.content1 .child .child1{
+background: #f1c40f;
+grid-area: child1;
+}
+.content1 .child .child2{
+background: #ec0772;
+grid-area: child2;
+}
+.content1 .child .child3{
+background: #091068;
+grid-area: child3;
+}
+.content1 .child .child4{
+background: #ecda93;
+grid-area: child4;
+}
+
+.content2{
+  background: #2c3e50;
+  grid-area: content2;    
+}
+.content3{
+  background: #95a5a6;
+  grid-area: content3;
+}
+.content4{
+  background: #F8EFBA;
+  grid-area: content4;
+}
+.content5{
+  background: #182C61;
+  grid-area: content5;
+}
+.content6{
+  background: #BDC581;
+  grid-area: content6;
+}
+.footer{
+  background: #f39c12;
+  grid-area: footer;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
